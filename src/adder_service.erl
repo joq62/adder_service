@@ -29,7 +29,8 @@
 -export([add/2
 	]).
 
--export([start/0,
+-export([boot/0,
+	 start/0,
 	 stop/0,
 	 ping/0,
 	 get_state/0,
@@ -46,7 +47,8 @@
 
 %% Asynchrounus Signals
 
-
+boot()->
+    application:start(?MODULE).
 
 %% Gen server functions
 
