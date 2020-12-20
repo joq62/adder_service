@@ -1,8 +1,7 @@
 all:
-	rm -rf ebin/* src/*~ test_ebin/* test_src/*~;
+	rm -rf ebin/* src/*~ test_ebin/* test_src/*~ erl_cr*;
 	cp src/*.app ebin;
-	erlc -o ebin src/*.erl;
-	rm -rf ebin/*.app
+	erlc -o ebin src/*.erl
 
 test:
 	rm -rf ebin/* src/*~ test_ebin/* test_src/*~;
